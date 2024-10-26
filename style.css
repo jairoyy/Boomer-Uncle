@@ -1,42 +1,62 @@
-* {
+body {
     margin: 0;
-    padding: 0;
-    background: #000;
-  }
-  
-  .header {
-    margin-left: 15px;
-    padding-bottom: 25px;
-    font-size: 50px;
     font-family: 'Sarpanch', sans-serif;
-  }
-  
-  .terminal {
-    position: absolute;
-    width: 90%;
-    height: 100%;
-    font-family: 'Share Tech', sans-serif;
-    color: #007500;
-  }
-  
-  .terminal-line {
-    display: block;
-    margin-left: 20px;
-    margin-top: 6px;
-    letter-spacing: 2.5px;
-    font-size: 16px;
-  }
+    background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
+    color: #00ff00; /* Green text for terminal look */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.terminal {
+    max-width: 800px; /* Limit the width */
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #00ff00; /* Green border */
+    border-radius: 10px;
+    background-color: rgba(26, 26, 26, 0.9); /* Slightly transparent for depth */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Glow effect */
+    overflow: auto; /* Allow scrolling if needed */
+}
+
+.header h1 {
+    font-size: 2.5em; /* Larger header font */
+    text-align: center;
+    margin: 0 0 20px 0; /* Spacing below header */
+}
+
+.terminal-line {
+    white-space: pre-wrap; /* Maintain spacing and line breaks */
+    font-family: 'Share Tech', monospace; /* Monospace font for terminal */
+    font-size: 1.1em; /* Base font size */
+}
 
 @media (max-width: 600px) {
     .terminal {
-        padding: 10px; /* Less padding on small screens */
+        padding: 15px; /* Less padding on small screens */
     }
 
     .header h1 {
-        font-size: 1.5em; /* Smaller header font on small screens */
+        font-size: 2em; /* Smaller header font on small screens */
     }
 
     .terminal-line {
         font-size: 0.9em; /* Slightly smaller text */
+    }
+}
+
+@media (max-width: 400px) {
+    .terminal {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .header h1 {
+        font-size: 1.5em; /* Even smaller header font */
+    }
+
+    .terminal-line {
+        font-size: 0.8em; /* Further reduce text size */
     }
 }
