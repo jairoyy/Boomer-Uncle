@@ -35,15 +35,7 @@ body {
 
 
 
-.screen-off {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10; /* Ensure it covers the terminal */
-}
+ 
 @media (max-width: 600px) {
     .terminal {
         padding: 15px; /* Less padding on small screens */
