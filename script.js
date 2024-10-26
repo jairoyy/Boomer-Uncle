@@ -85,3 +85,26 @@ terminals_init()
 window.onload = function() { terminals_start() };
 
 alert("For Educational Purpose Only");
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Simulate successful action after a delay
+    setTimeout(() => {
+        document.querySelector('.terminal-line').innerHTML += `
+            <br /><br />
+            Screen off...<br />
+            <div class="screen-off"></div>
+        `;
+        // Call function to turn off the screen
+        turnOffScreen();
+    }, 5000); // Adjust the delay as needed (5 seconds here)
+});
+
+function turnOffScreen() {
+    // Add styles to mimic a screen off state
+    const terminal = document.querySelector('.terminal');
+    terminal.style.opacity = '0.5'; // Dim the screen
+    terminal.style.backgroundColor = '#000'; // Change background to black
+    terminal.style.color = '#444'; // Change text color to dim
+    terminal.querySelector('.terminal-line').style.color = '#444'; // Dim the text
+}
