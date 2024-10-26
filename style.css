@@ -1,65 +1,47 @@
 body {
     margin: 0;
     font-family: 'Sarpanch', sans-serif;
-    background: linear-gradient(to bottom right, #0d0d0d, #1a1a1a);
-    color: #00ff00; /* Green text for terminal look */
+    background-color: #1e1e1e;
+    color: #00ff00;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
+    height: 100vh;
 }
 
 .terminal {
-    max-width: 800px; /* Limit the width */
-    margin: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
-    border: 2px solid #00ff00; /* Green border */
-    border-radius: 10px;
-    background-color: rgba(26, 26, 26, 0.9); /* Slightly transparent for depth */
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Glow effect */
-    overflow: auto; /* Allow scrolling if needed */
+    border: 1px solid #00ff00;
+    border-radius: 8px;
+    background-color: rgba(30, 30, 30, 0.8);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
 }
 
 .header h1 {
-    font-size: 2.5em; /* Larger header font */
+    font-size: 24px;
+    margin: 0;
     text-align: center;
-    margin: 0 0 20px 0; /* Spacing below header */
 }
 
 .terminal-line {
-    white-space: pre-wrap; /* Maintain spacing and line breaks */
-    font-family: 'Share Tech', monospace; /* Monospace font for terminal */
-    font-size: 1.1em; /* Base font size */
+    display: block;
+    white-space: pre-wrap; /* Preserve whitespace */
+    font-family: 'Share Tech', monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden; /* Prevent overflow */
 }
 
-
-
- 
+/* Responsive styles */
 @media (max-width: 600px) {
     .terminal {
-        padding: 15px; /* Less padding on small screens */
-    }
-
-    .header h1 {
-        font-size: 2em; /* Smaller header font on small screens */
+        width: 95%;
     }
 
     .terminal-line {
-        font-size: 0.9em; /* Slightly smaller text */
-    }
-}
-
-@media (max-width: 400px) {
-    .terminal {
-        padding: 10px; /* Further reduce padding */
-    }
-
-    .header h1 {
-        font-size: 1.5em; /* Even smaller header font */
-    }
-
-    .terminal-line {
-        font-size: 0.8em; /* Further reduce text size */
+        font-size: 14px;
     }
 }
